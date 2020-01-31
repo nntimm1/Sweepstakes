@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SweepstakesApp
 {
-    class Class1
+    class UserInterface
     {
         // -------------------------------- Member Variable -------------------------------
 

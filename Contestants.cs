@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SweepstakesApp
 {
-    class Contestants
+    public class Contestants
     {
         // -------------------------------- Member Variable -------------------------------
         public string firstName;
@@ -17,9 +17,12 @@ namespace SweepstakesApp
 
         // -------------------------------- Constructor -----------------------------------
 
-        public Contestants()
+        public Contestants(int registration, string first, string last, string email)
         {
-            registrationNumber = 00000;
+            firstName = first;
+            lastName = last;
+            emailAddress = email;
+            registrationNumber = registration;
         }
 
 
