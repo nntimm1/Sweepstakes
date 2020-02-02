@@ -42,6 +42,11 @@ namespace SweepstakesApp
         {
             Console.WriteLine();
         }
+        public void ContestantRegister()
+        {
+
+        }
+
 
 
 
