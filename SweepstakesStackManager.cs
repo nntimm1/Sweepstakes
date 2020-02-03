@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SweepstakesApp
 {
-    public class SweepstakesStackManager : ISweepstakesManager
+    class SweepstakesStackManager : ISweepstakesManager
     {
         // -------------------------------- Member Variable -------------------------------
         Stack<Sweepstakes> stack;
@@ -21,11 +21,12 @@ namespace SweepstakesApp
 
         public void InsertSweepstakes(Sweepstakes sweepstakes)
         {
-
+            stack.Push(sweepstakes);
         }
-        public void GetSweepstakes()
+        public Sweepstakes GetSweepstakes()
         {
-
+            return stack.Pop();
+           
         }
     }
 }

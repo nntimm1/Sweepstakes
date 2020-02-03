@@ -24,7 +24,7 @@ namespace SweepstakesApp
 
 
         // -------------------------------- Member Method ---------------------------------
-        public string AddNewSweepstakes()
+        public string AddNewSweepstakes(object contestantRegistration)
         {
             nameOfSweepstakes = Console.ReadLine();
             return nameOfSweepstakes;

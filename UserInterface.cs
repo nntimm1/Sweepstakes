@@ -9,7 +9,7 @@ namespace SweepstakesApp
     static class UserInterface
     {
         // -------------------------------- Member Variable -------------------------------
-        static public Contestant newContestant;
+        
 
         static public int registrationNumber = 0;
         static public string firstName;
@@ -22,19 +22,21 @@ namespace SweepstakesApp
 
         // -------------------------------- Member Method ---------------------------------
 
-        private static void GetFirstName()
+        private static string GetFirstName()
         {
             Console.WriteLine("Enter Contestant First Name:");
             firstName = Console.ReadLine();
+            return firstName;
         }
-        private static void GetLastName()
+        private static string GetLastName()
         {
             Console.WriteLine("Enter Contestant Last Name:");
             lastName = Console.ReadLine();
+            return lastName;
         }
-        private static void GetEmailAddress()
+        private static string GetEmailAddress()
         {
-            emailAddress = tempEmailAddress;
+            
             Console.WriteLine("Enter Contestant Email Address:");
             tempEmailAddress = Console.ReadLine();
             if ((tempEmailAddress.Contains("@"))) { }
@@ -50,7 +52,10 @@ namespace SweepstakesApp
             string[] splitString = tempEmailAddress.Split('@');
             if (splitString.Contains(""))
             {Console.WriteLine("That was not a valid email address. Please Try again."); GetEmailAddress();}
-            else { return; }
+            else { 
+                emailAddress = tempEmailAddress;
+                }
+            return emailAddress;
         }
         private static int GetRegistrationNumber()
         {
