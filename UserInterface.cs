@@ -21,10 +21,7 @@ namespace SweepstakesApp
 
 
         // -------------------------------- Member Method ---------------------------------
-        //public void GetContestant()
-        //{
-           
-        //}
+
         private static void GetFirstName()
         {
             Console.WriteLine("Enter Contestant First Name:");
@@ -58,7 +55,7 @@ namespace SweepstakesApp
         private static int GetRegistrationNumber()
         {
             registrationNumber++;
-            Console.WriteLine("The registration Number for this COntestant is: " + registrationNumber);
+            Console.WriteLine("The registration Number for this Contestant is: " + registrationNumber);
             return registrationNumber;
         }
         public static Contestant ContestantAdd()  //Master Method 

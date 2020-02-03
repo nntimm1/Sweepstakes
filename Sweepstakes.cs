@@ -10,7 +10,7 @@ namespace SweepstakesApp
     {
         // -------------------------------- Member Variable -------------------------------
 
-        Dictionary<string, string> sweepstakes = new Dictionary<string, string>();
+        Dictionary<int, Contestant> contestants = new Dictionary<int, Contestant>();
         string nameOfSweepstakes;
         Random random = new Random();
         public int sweepstakesWinner;
