@@ -16,6 +16,7 @@ namespace SweepstakesApp
         static public string lastName;
         static public string emailAddress;
         static public string tempEmailAddress;
+        private static Contestant newContestant;
 
         // -------------------------------- Constructor -----------------------------------
 
@@ -73,8 +74,9 @@ namespace SweepstakesApp
             GetEmailAddress();
             
             GetRegistrationNumber();
-           
+
             return newContestant;
         }
+
     }
 }

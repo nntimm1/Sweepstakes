@@ -24,14 +24,21 @@ namespace SweepstakesApp
 
 
         // -------------------------------- Member Method ---------------------------------
-        public void CreateMarketingFirmWithManager()
+        public ISweepstakesManager CreateMarketingFirmWithManager()
         {
-            Console.WriteLine("Enter Your Firm Name.");
-            this.firmName = Console.ReadLine();
-            Console.WriteLine("Enter Your User Name.");
-            this.userName = Console.ReadLine();
-            Console.WriteLine("Please Create a Password.");
-            this.password = Console.ReadLine();
+            Console.WriteLine("Which type of SweepStake would you like to use? \n Enter 'Stack' or 'Queue'");
+            string userInput = Console.ReadLine();
+            ISweepstakesManager manager = null;
+            if ((userInput == "Stack") || (userInput == "stack"))
+            {
+                manager = new SweepstakesStackManager();
+            }
+            else if ((userInput == "Queue") || (userInput == "queue"))
+            {
+                manager = new SweepstakesQueueManager();
+            }
+            return manager;
         }
+
     }
 }

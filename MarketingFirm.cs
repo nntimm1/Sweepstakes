@@ -9,7 +9,7 @@ namespace SweepstakesApp
     class MarketingFirm
     {
         // -------------------------------- Member Variable -------------------------------
-        ISweepstakesManager Manager;
+        ISweepstakesManager manager;
 
 
         // -------------------------------- Constructor -----------------------------------
@@ -20,13 +20,19 @@ namespace SweepstakesApp
         
         public void CreateSweepstakes()
         {
+
             Sweepstakes sweepstakes = new Sweepstakes();
 
-            Manager.InsertSweepstakes(sweepstakes);
+
+
+            manager.InsertSweepstakes(sweepstakes);
+
+
         }
         public MarketingFirm(ISweepstakesManager manager)
         {
-            this.Manager = manager;
+
+            this.manager = manager;
         }
 
     }
