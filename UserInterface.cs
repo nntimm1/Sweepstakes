@@ -6,41 +6,38 @@ using System.Threading.Tasks;
 
 namespace SweepstakesApp
 {
-    class UserInterface
+    static class UserInterface
     {
         // -------------------------------- Member Variable -------------------------------
-        public Contestants newContestant;
-        public int registrationNumber;
-        public string firstName;
-        public string lastName;
-        public string emailAddress;
-        public string tempEmailAddress;
+        static public Contestant newContestant;
 
-
+        static public int registrationNumber = 0;
+        static public string firstName;
+        static public string lastName;
+        static public string emailAddress;
+        static public string tempEmailAddress;
 
         // -------------------------------- Constructor -----------------------------------
-        public UserInterface()
-        {
-            registrationNumber = 0;
-        }
-
-
 
 
         // -------------------------------- Member Method ---------------------------------
-        public void GetFirstName()
+        //public void GetContestant()
+        //{
+           
+        //}
+        private static void GetFirstName()
         {
             Console.WriteLine("Enter Contestant First Name:");
             firstName = Console.ReadLine();
         }
-        public void GetLastName()
+        private static void GetLastName()
         {
             Console.WriteLine("Enter Contestant Last Name:");
             lastName = Console.ReadLine();
         }
-        public void GetEmailAddress()
+        private static void GetEmailAddress()
         {
-            this.emailAddress = tempEmailAddress;
+            emailAddress = tempEmailAddress;
             Console.WriteLine("Enter Contestant Email Address:");
             tempEmailAddress = Console.ReadLine();
             if ((tempEmailAddress.Contains("@"))) { }
@@ -58,15 +55,23 @@ namespace SweepstakesApp
             {Console.WriteLine("That was not a valid email address. Please Try again."); GetEmailAddress();}
             else { return; }
         }
-        public int GetRegistrationNumber()
+        private static int GetRegistrationNumber()
         {
             registrationNumber++;
             Console.WriteLine("The registration Number for this COntestant is: " + registrationNumber);
             return registrationNumber;
         }
-        public Contestants ContestantAdd(int registration, string first, string last, string email)
+        public static Contestant ContestantAdd()  //Master Method 
         {
-            newContestant = new Contestants(registration, first, last, email);
+            newContestant = new Contestant();
+            GetFirstName();
+           
+            GetLastName();
+            
+            GetEmailAddress();
+            
+            GetRegistrationNumber();
+           
             return newContestant;
         }
     }

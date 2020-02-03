@@ -6,51 +6,43 @@ using System.Threading.Tasks;
 
 namespace SweepstakesApp
 {
-    class Sweepstakes 
+    public class Sweepstakes 
     {
         // -------------------------------- Member Variable -------------------------------
 
         Dictionary<string, string> sweepstakes = new Dictionary<string, string>();
         string nameOfSweepstakes;
         Random random = new Random();
-        int maxRegistrationNumber;
+        public int sweepstakesWinner;
 
         // -------------------------------- Constructor -----------------------------------
 
         public Sweepstakes()
         {
-            
+
         }
 
 
         // -------------------------------- Member Method ---------------------------------
-        public void AddNewSweepstakes()
+        public string AddNewSweepstakes()
         {
             nameOfSweepstakes = Console.ReadLine();
+            return nameOfSweepstakes;
+         
         }
         public void ContestantRegistration()
         {
-
+            UserInterface.ContestantAdd();
         }
-        public void PickAWinner()
+        public int PickAWinner()
         {
-            random.Next(0,maxRegistrationNumber);
-
-
+            sweepstakesWinner = random.Next(0, 5000);
+            return sweepstakesWinner;
         }
-        public void PrintContestand()
+        public void PrintContestant()
         {
-            Console.WriteLine();
+            Console.WriteLine("The Winner Is : " +sweepstakesWinner);
+            Console.WriteLine("Congratulations " + UserInterface.firstName +" " + UserInterface.lastName);
         }
-        public void ContestantRegister()
-        {
-
-        }
-
-
-
-
-
-
     }
 }

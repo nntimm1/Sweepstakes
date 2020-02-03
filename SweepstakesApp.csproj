@@ -43,10 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interface1.cs" />
+    <Compile Include="MarketingFirm.cs" />
+    <Compile Include="Simulation.cs" />
+    <Compile Include="SweepstakesQueueManager.cs" />
+    <Compile Include="SweepstakesStackManager.cs" />
+    <Compile Include="ISweepstakesManager.cs" />
     <Compile Include="Sweepstakes.cs" />
     <Compile Include="UserInterface.cs" />
-    <Compile Include="Contestants.cs" />
+    <Compile Include="Contestant.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
